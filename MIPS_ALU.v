@@ -104,9 +104,8 @@ ALUcontol c1 (fn, op, ctl);
 endmodule
 
 
-// clock 16MHZ
-`timescale 1ps/1ps
 module clock(clk);
+`timescale 100ps/1ps
 output reg clk;
 initial
 	begin
@@ -114,9 +113,10 @@ initial
 	end
 always
 	begin
-		#62500
+		#625
 		assign clk = 1;
-		#62500
+		#625
 		assign clk = 0;
 	end
 endmodule
+
