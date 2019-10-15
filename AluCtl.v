@@ -13,11 +13,11 @@ else if (aluop==2'b01) //beq
 else if (aluop==2'b10) //R-format
   begin
      case (funct)
-	32:aluctl <= 2;
-	34:aluctl <= 6;
-	36:aluctl <= 0;
-	37:aluctl <= 1;
-	42:aluctl <= 7;
+	32:aluctl <= 2; //add
+ 	34:aluctl <= 6; //sub
+	36:aluctl <= 0; //and
+	37:aluctl <= 1; //or
+	42:aluctl <= 7; //slt
 	default:aluctl <= 0;
       endcase
   end
