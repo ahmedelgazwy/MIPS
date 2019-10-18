@@ -2,7 +2,7 @@
 module InstructionMemory(Instruction,ReadAdd,clk);
 
 input clk;                   //the instruction is constant within the cycle
-input [15:0]ReadAdd;         //4 hexadicimal digits from pc
+ input [31:0]ReadAdd;         //4 hexadicimal digits from pc
 output reg [31:0]Instruction;
 
 reg[31:0]instmem[0:8191];
